@@ -6,35 +6,40 @@ paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
 */
 
-/* Fonts */
 
 *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-size: 16px;
-    margin-right: 10px;
-    margin-left: 10px;
     font-family: 'awesome CDN';
-    color:#5b5e6d ;
 }
+/* Fonts */
 h1{
-    font-size: 3rem;
-    margin-bottom: 3px;
-    color: #2C303F;
+color:#2C303F;
+font-size: 3rem;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:#5b5e6d ;
 }
 
 h2{
-    font-size: 1.7rem;
     color: #2C303F;
-    margin-bottom: 5px;
+    font-size: 1.9rem;
 }
-a{
-    font-size: 1.5rem;
+#try-free-text{
+    font-size: 1.7rem;
+    color:#2C303F;
+    font-weight: 500;
 }
 
-/* nav and header */
+
+/* Navigation bar */
+
+.navbar img{
+    width: 75px;
+}
 
 .navbar{
     display: flex;
@@ -52,218 +57,383 @@ a{
     align-items: center;
     gap: 40px;
     display: none;
-    
 }
-
 .hamburger{
     display: block;
     cursor: pointer;
-
 }
-
 .bar{
     display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: black;
+    background-color:#5b5e6d;
 }
-
-
-.navbar img{
-    width: 60px;
-    height: 60px;
-    margin-right: 90px;
-    margin-left: 0;
-}
-
 .navbar li{
     list-style: none;
-
 }
 
-header form{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    width: 100%;
-
+/* Atomic classes */
+.paddings{
+   padding: 2px 20px;
 }
 
-.btnbox{
+/* Header */
+
+header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:100%;
+    gap: 10px;
 }
 
-form input{
-    width:100%;
-    height: 40px;
-    margin: 0 auto;
+.email-input{
+    width: 350px;
+    height: 50px;
 }
 
-header button,.lastbtn{
-    width: 100%;
-    padding: 15px 20px;
-    background-color: #192592;
-    border: none;
+.get-started-btn{
+    background-color:#192592;
     color: white;
-    margin-top: 15px;
+    width: 100%;
+    height: 50px;
     border-radius: 5px;
+    border:none;
 }
 
 header img{
-    margin-top: 20px;
-    width: 90%;
-    height: 100%;
-    
+    width: 90vw;
 }
-
-/* Main  */
-
-main{
-    background-color: #F4F3F4;
+.input-btn{
     display: flex;
     flex-direction: column;
-   
-    justify-content: space-between;
+    gap: 10px;
 }
 
-.main-first-part{
+/* Main */
+
+main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:20px;
+    background-color:#F4F3F4 ;
+    
+    
 }
 
-main img{
-    width: 200px;
+.ad-pictures{
+    width: 70vw;
 }
-.imgbox{
+
+.first-part-main{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 800px;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    
+    
 }
-
-main p{
+.first-part-main p{
     text-align: center;
 }
 
-.main-first-part  button{
-    padding: 15px 20px;
-    border-radius: 5px;
-    background-color: white;
-    border:1px solid #192592;
+.gap-ads{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.discover-why-btn{
+    background-color:white;
+    border: 1px solid #192592;
     color: #192592;
-    font-weight: 600;
-    margin-top: 10px;
-
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
 }
-.mainbottom{
+
+.last-part-main{
     background-color: white;
-    width: 100%;
-    margin-left: 0px;
-}
- .bold{
-     font-weight: 700;
- }
-
- /* footer */
- .lists{
-     display:flex;
-     flex-direction: column;
-     justify-content: space-around;
-     align-items:flex-start ;
- }
-
- ul li{
-     list-style: none;
- }
-
-
-
-.bottompart{
-    background-color: #F4F3F4;
-    width: 100%;
+    width: 100vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+  
+}
+
+.last-part-main button{
+    background-color:#192592;
+    color: white;
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    border:none;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+.four-lists{
+    display: grid;
+    grid-template-columns: auto auto;
+   gap: 15px;
+}
+
+.slack-logo{
+    width: 150px;
+    display: block;
+    grid-column: 1/3 ;
     
 }
 
- .bottompart ul li{
-     display: inline;
-     margin-left: 2px;
-     font-weight: 500;
- }
+.four-lists li{
+    list-style: none;
+    line-height: 30px;
+    color:#5b5e6d ;
+    font-size: 1.2rem;
+}
 
- .bottompart img{
-     width: 20px;
-       
- }
+.four-lists ul li:first-child{
+    font-weight: bold;
+}
 
- .flag-position{
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     margin-bottom: 15px;
- }
+.footer-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
- .socialmedia{
-     margin-bottom: 15px;
- }
+.last-part-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 150px;
+    background-color: #F4F3F4;
+}
 
- /* tablet size */
+.last-part-footer ul li{
+    display: inline;
+    list-style: none;
+    font-size: 1.1rem;
+    margin: 5px 7px;
+    color: #5b5e6d;
+    font-weight: bold;
+    
+    
+}
 
- @media(min-width:820px){
-     /*header */
-     .btnbox{
-         display: flex;
-         flex-direction: row;
-         justify-content:flex-start ;
-     }
-   .btnbox button{
-       width: 30%;
-       display: inline;
-       margin-top: 0;
-   } 
-   .btnbox form{
-       width: 40%;
-       display: inline;
-       margin-bottom: 0;
-   }
+.last-part-footer img{
+    width:20px ;
+}
 
-   .btnbox p{
-       display: block;
-   }
-   /*main */
-   .main-first-part{
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-   }
+.socialmedia-flag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.socialmedia-flag i{
+    margin: 0px 10px;
+    color: #5b5e6d;
+}
+.socialmedia-flag span{
+    color: #5b5e6d;
+    font-weight: bold;
+}
 
 
-   .main-first-part button{
+/* Tablet size */
+
+@media(min-width:767px){
+/* Fonts */
+*{
+    font-size: 16px;
+}
+h1{
+    font-size: 4.5rem;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.5rem;
+}
+
+
+
+/* header */
+header{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.email-input{
+   display: inline;
+   width: 40vw;
+   
+}
+.get-started-btn{
+    width: 40%;
+    display: inline;
+    padding: 5px 30px;
+    
+    
+}
+
+.input-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.input-btn input{
+    border: 1px solid #F4F3F4 ;
+}
+
+/* Main */
+.first-part-main{
+    margin-top: 20px;
+}
+
+.discover-why-btn{
     width: 30%;
-   }
+}
 
-   .imgbox{
-       display: flex;
-       flex-direction: row;
-   }
+.ad-pictures{
+    width:28vw ;
+    
+}
 
-   .bottompart{
-       display: flex;
-       flex-direction: row;
-       justify-content: flex-start ;
-   }
+.gap-ads{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-evenly;
+    height: 300px;
+}
 
- }
+.last-part-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 200px;
+}
+
+.last-part-main input{
+    width: 200px;
+    height: 60px;
+    
+}
+.last-part-main button{
+    width: 150px;
+    position: relative;
+    right: 10px;
+    height: 60px;
+    
+}
+
+#usingslack{
+    position: relative;
+    right: 138px;
+    top:40px;
+}
+#try-free-text{
+    position: relative;
+    left:30px;
+}
+
+/* Footer */
+
+.slack-logo{
+    grid-column: 1/1;
+
+}
+.four-lists{
+    grid-template-columns: repeat(5, auto);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.last-part-footer{
+    flex-direction: row;
+    justify-content: space-around;
+}
+.socialmedia-flag{
+    flex-direction: row;
+}
+
+}
+
+/* Medium Screen */
+
+@media(min-width:1200px){
+
+    /* navigation bar */
+    .nav-menu{
+        display: inline;
+    }
+    .nav-item{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 10px;
+        font-size: 1.3rem;
+        color:#5b5e6d;
+    }
+
+    .workspaces-btn{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0px 15px;
+    }
+
+    .hamburger{
+        display: none;
+    }
+    /* header */
+    form{
+        display: none;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 20px;
+        height: 600px;
+    }
+    .home-work-img{
+        grid-row: 1/3;
+        grid-column: 1/1;
+        width: 40vw;
+    }
+    .first-button{
+        position: relative;
+        left: 600px;
+        bottom: 60px;
+    }
+    
+}
  
